@@ -1,0 +1,41 @@
+#windlg {
+  position: absolute;
+  margin: auto;
+  border: 1px solid black;
+  background-color: white;
+  box-shadow: 2px 2px #0005;
+  padding: 5px;
+  text-align: center;
+  display: none;
+}
+
+#windlg > #restart,
+#reset {
+  background-color: lightgray;
+  border: 1px solid black;
+  padding: 2px;
+  display: block;
+}
+
+#redwin {
+  display: none;
+  background-color: red;
+}
+#greenwin {
+  display: none;
+  background-color: green;
+}
+
+.board {
+  display: grid;
+  background-color: black;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(3, 50px);
+  grid-gap: 1px;
+  border: 1px solid black;
+}
+
+.cell {
+  background-color: white;
+  cursor: pointer;
+}
