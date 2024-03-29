@@ -4,6 +4,16 @@ window.addEventListener("load", () => {
   let player = "red";
   let redCells = [0, 0, 0, 0, 0, 0, 0, 0, 0];
   let greenCells = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+  // on à chaque fois le fond de la page pour indique qui joue
+
+  function changeBackground() {
+    if (player === "red") {
+      document.body.style.backgroundColor = "red";
+    }
+    if (player === "green") {
+      document.body.style.backgroundColor = "green";
+    }
+  }
 
   function checkWin(redCells, greenCells) {
     const WinConfigurations = [
@@ -68,6 +78,7 @@ window.addEventListener("load", () => {
         }
       }
       checkWin(redCells, greenCells);
+      changeBackground();
     });
   }
 
@@ -80,6 +91,7 @@ window.addEventListener("load", () => {
     player = "red";
     redCells = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     greenCells = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    changeBackground();
   });
 
   document.getElementById("restart").addEventListener("click", () => {
@@ -87,6 +99,8 @@ window.addEventListener("load", () => {
       item.style.backgroundColor = "white";
     });
     // On fait en sorte que ce soit toujours le joueur rouge qui commence
+    changeBackground();
+
     player = "red";
     redCells = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     greenCells = [0, 0, 0, 0, 0, 0, 0, 0, 0];
