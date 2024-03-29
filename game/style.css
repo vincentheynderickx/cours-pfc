@@ -36,8 +36,8 @@ body {
   background-color: black;
   grid-template-columns: repeat(3, 150px);
   grid-template-rows: repeat(3, 150px);
-  grid-gap: 1px;
-  border: 1px solid black;
+  grid-gap: 10px;
+  border: 10px solid black;
 }
 
 .cell {
