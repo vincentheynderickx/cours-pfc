@@ -1,3 +1,5 @@
+// Remarque : Je n'ai pas eu le temps de terminer ce jeu, mais le tic-tac-toe est fonctionnel.
+
 window.addEventListener("load", () => {
   // Create grid
   const grid = document.getElementById("minesweeper-grid");
