@@ -40,7 +40,6 @@ window.addEventListener("load", () => {
         }
         if (countSimilarRed === 3) {
           console.log("red win");
-          var redCellsString = redCells.toString();
           document.getElementById("windlg").style.display = "block";
           document.getElementById("board").style.display = "none";
           document.getElementById("reset").style.display = "none";
