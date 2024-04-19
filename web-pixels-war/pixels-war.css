@@ -19,3 +19,12 @@ body {
         margin: 0px;
     }
 }
+
+#message {
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+#message p {
+    font-weight: bold;
+}
