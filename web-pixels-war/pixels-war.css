@@ -8,8 +8,6 @@ body {
 #grid {
     margin: 10px 0 50px 0;
     display: grid;
-    /*TODO à récupérer sur le serveur*/
-    /*toutes les cartes ne sont pas forcément en 100x100*/
     grid-template-columns: repeat(100, 4px);
     grid-template-rows: repeat(100, 4px);
 
