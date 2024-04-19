@@ -36,8 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
             refresh(json.id)
           })
         })
-      //TODO: pour les avancés: ça pourrait être utile de pouvoir
-      // choisir la couleur à partir d'un pixel ?
     })
 
   function refresh(user_id) {
@@ -53,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
       })
   }
 
-  // Petite fonction facilitatrice pour récupérer la couleur cliquée en RGB
   function getPickedColorInRGB() {
     const colorHexa = document.getElementById("colorpicker").value
 
@@ -62,24 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const b = parseInt(colorHexa.substring(5, 7), 16)
 
     return [r, g, b]
-  }
-
-  // dans l'autre sens, pour mettre la couleur d'un pixel dans le color picker
-  // (le color picker insiste pour avoir une couleur en hexadécimal...)
-  function pickColorFrom(div) {
-    // plutôt que de prendre div.style.backgroundColor
-    // dont on ne connait pas forcément le format
-    // on utilise ceci qui retourne un 'rbg(r, g, b)'
-    const bg = window.getComputedStyle(div).backgroundColor
-    // on garde les 3 nombres dans un tableau de chaines
-    const [r, g, b] = bg.match(/\d+/g)
-    // on les convertit en hexadécimal
-    const rh = parseInt(r).toString(16).padStart(2, '0')
-    const gh = parseInt(g).toString(16).padStart(2, '0')
-    const bh = parseInt(b).toString(16).padStart(2, '0')
-    const hex = `#${rh}${gh}${bh}`
-    // on met la couleur dans le color picker
-    document.getElementById("colorpicker").value = hex
   }
 
 })
